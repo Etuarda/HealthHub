@@ -1,0 +1,145 @@
+:root {
+    --bg: #F7F8FA;
+    --fg: #1F2937;
+    --muted: #6B7280;
+    --blue: #2563EB;
+    --line: #E5E7EB;
+    --green: #16A34A;
+    --red: #DC2626
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.container-sm {
+    max-width: 420px;
+    margin: 80px auto;
+}
+
+.container-lg {
+    max-width: 720px;
+    margin: 40px auto;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.row.right {
+    justify-content: flex-end
+}
+
+.btn {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: #fff;
+    color: var(--fg);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.btn:disabled,
+.btn-outline:disabled {
+    opacity: .6;
+    cursor: not-allowed
+}
+
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.center {
+    text-align: center;
+}
+
+.mt-8 {
+    margin-top: 8px
+}
+
+.mt-16 {
+    margin-top: 16px
+}
+
+.mt-24 {
+    margin-top: 24px
+}
+
+.err {
+    color: var(--red);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.empty {
+    color: var(--muted);
+    text-align: center;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: .85rem;
+    border: 1px solid var(--line)
+}
+
+.badge.paid {
+    background: #e7f7ec
+}
+
+.badge.payment_pending {
+    background: #fff3e6
+}
+
+.ul {
+    margin: 0;
+    padding-left: 18px
+}

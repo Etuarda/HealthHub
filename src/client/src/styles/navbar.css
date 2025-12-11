@@ -1,0 +1,6 @@
+.nav{ position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; background:#fff; border-bottom:1px solid var(--line); }
+.nav a{ color:var(--fg); text-decoration:none; }
+.nav .brand{ font-weight:700 }
+.nav-mid{ display:flex; gap:16px }
+.nav-right{ display:flex; gap:12px; align-items:center; }
+.hello{ color:var(--muted) }
