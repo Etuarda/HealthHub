@@ -1,159 +1,78 @@
-HealthHub - Solução Integrada de E-commerce de Saúde
+# 🏥 HealthHub — Solução Integrada de E-commerce de Saúde
 
-O HealthHub é uma aplicação Fullstack moderna desenvolvida para proporcionar uma experiência completa de comércio eletrónico focada em produtos de saúde e bem-estar. O projeto utiliza uma arquitetura MVC (Model-View-Controller) no backend e uma interface reativa e tipada no frontend.
+O **HealthHub** é uma aplicação **Fullstack** moderna focada em comércio eletrónico de produtos de **saúde e bem-estar**.  
+O projeto foi desenvolvido com **arquitetura MVC no backend** e uma **interface reativa e tipada no frontend**, com ênfase em fluxos reais de e-commerce, autenticação segura e organização de código para portfólio profissional.
 
-🎯 Objetivo do Projeto
+---
 
-Este projeto foi construído para demonstrar o domínio de tecnologias como React, TypeScript e TypeORM, focando-se em fluxos complexos de utilizador, como autenticação persistente, gestão de estado de carrinho e integração com bases de dados relacionais.
+## 🎯 Objetivo do Projeto
 
-✨ Funcionalidades
+Demonstrar domínio prático de **React**, **TypeScript** e **TypeORM**, explorando cenários comuns e complexos de aplicações comerciais, como:
 
-🔐 Autenticação e Segurança
+- Autenticação persistente com JWT  
+- Gestão de estado de carrinho  
+- Integração com base de dados relacional  
+- Organização de código seguindo boas práticas (MVC, separação de responsabilidades)
 
-Registo e Login: Sistema completo com validação de credenciais.
+O projeto foi pensado como um **case completo de e-commerce**, não apenas como um CRUD simples.
 
-JWT (JSON Web Tokens): Sessões seguras com expiração configurável.
+---
 
-BcryptJS: Encriptação de palavras-passe antes do armazenamento na base de dados.
+## ✨ Funcionalidades
 
-Rotas Protegidas: Acesso ao painel de compras e checkout apenas para utilizadores autenticados.
+### 🔐 Autenticação e Segurança
 
-🛒 Experiência de Compra
+- **Registo e Login** com validação de credenciais  
+- **JWT (JSON Web Tokens)** com expiração configurável  
+- **BcryptJS** para encriptação de palavras-passe  
+- **Rotas protegidas** para carrinho, checkout e histórico de encomendas  
 
-Catálogo Dinâmico: Listagem de produtos com imagens, descrições e preços reais.
+---
 
-Pesquisa e Filtros: Procura em tempo real integrada com o backend.
+### 🛒 Experiência de Compra
 
-Paginação: Carregamento eficiente de produtos para otimização de performance.
+- **Catálogo dinâmico de produtos** (imagens, descrição e preço)  
+- **Pesquisa e filtros** integrados ao backend  
+- **Paginação** para melhor performance  
+- **Favoritos**, permitindo marcar produtos  
+- **Gestão de carrinho**:
+  - Adição e remoção de itens  
+  - Ajuste de quantidades  
+  - Cálculo automático de totais e portes  
 
-Favoritos: Possibilidade de marcar produtos para acesso rápido posterior.
+---
 
-Gestão de Carrinho: Adição, remoção e ajuste de quantidades com cálculo automático de totais e portes.
+### 📦 Gestão de Encomendas
 
-📦 Gestão de Encomendas
+- **Checkout step-by-step** (morada → pagamento)  
+- **Histórico de pedidos** por utilizador  
+- **Tracking de encomendas** com estados:
+  - Pendente  
+  - Pago  
+  - Enviado  
 
-Checkout Step-by-Step: Fluxo dividido entre morada de entrega e dados de pagamento.
+---
 
-Histórico: Lista detalhada de todos os pedidos realizados.
+## 🛠️ Tecnologias Utilizadas
 
-Tracking: Sistema de estados do pedido (Pendente, Pago, Enviado).
+### Frontend
 
-🛠️ Tecnologias Utilizadas
+- **React 18**
+- **TypeScript**
+- **Vite** (build e dev server)
+- **React Router DOM** (SPA)
+- **CSS3 moderno** com variáveis e layouts flexíveis
 
-Frontend
+### Backend
 
-React.js 18: Biblioteca principal para a interface.
+- **Node.js**
+- **Express**
+- **TypeORM**
+- **SQLite** (base de dados relacional em ficheiro)
+- **JWT + Middleware de autenticação**
+- **BcryptJS**
 
-TypeScript: Garantia de tipagem e redução de erros em tempo de desenvolvimento.
+---
 
-Vite: Ferramenta de build de nova geração para performance superior.
+## 📂 Estrutura de Pastas
 
-React Router Dom: Gestão de navegação SPA (Single Page Application).
-
-CSS3 Moderno: Estilização baseada em variáveis e layouts flexíveis.
-
-Backend
-
-Node.js & Express: Framework para a API REST.
-
-TypeORM: ORM (Object-Relational Mapping) para gestão da base de dados.
-
-SQLite: Base de dados relacional leve (em ficheiro) para facilidade de portabilidade.
-
-Middleware: Validação de tokens e proteção de recursos.
-
-📂 Estrutura de Pastas
-
-├── src/
-│   ├── client/           # Código Fonte do Frontend
-│   │   ├── components/   # Componentes reutilizáveis (Navbar, Cards)
-│   │   ├── views/        # Páginas principais da aplicação
-│   │   ├── utils/        # Hooks de Autenticação e Instância da API
-│   │   └── styles/       # Ficheiros CSS modulares
-│   └── server/           # Código Fonte do Backend
-│       ├── controllers/  # Lógica de rotas e regras de negócio
-│       ├── entities/     # Definição das tabelas da base de dados (Models)
-│       ├── routes/       # Definição dos endpoints da API
-│       └── images/       # Ativos estáticos dos produtos
-
-
-🚀 Como Executar o Projeto
-
-Pré-requisitos
-
-Node.js (v18 ou superior)
-
-npm ou yarn
-
-Instalação e Execução
-
-Clone o repositório:
-
-git clone [https://github.com/Etuarda/HealthHub.git](https://github.com/Etuarda/HealthHub.git)
-cd HealthHub
-
-
-Instale todas as dependências:
-O projeto está configurado para instalar as dependências do client e do server automaticamente através do comando na raiz:
-
-npm install
-
-
-Configure o Ambiente:
-No diretório src/server, verifique ou crie o ficheiro .env:
-
-JWT_SECRET=seu_segredo_super_secreto
-JWT_EXPIRES=2h
-
-
-Inicie o projeto:
-Execute o comando abaixo para iniciar o servidor e o cliente em simultâneo (modo desenvolvimento):
-
-npm run dev
-
-
-A aplicação estará disponível em: http://localhost:5173
-
-📡 Endpoints Principais (API)
-
-Método
-
-Endpoint
-
-Descrição
-
-POST
-
-/api/register
-
-Cria um novo utilizador
-
-POST
-
-/api/login
-
-Autentica e retorna o token JWT
-
-GET
-
-/api/produtos
-
-Lista produtos com filtros e paginação
-
-POST
-
-/api/favoritos/:id
-
-Adiciona um produto aos favoritos
-
-POST
-
-/api/pedidos
-
-Cria uma nova encomenda
-
-✒️ Autor
-
-Desenvolvido por Eduarda.
-
-Este projeto foi desenvolvido para fins de estudo e portfólio, aplicando conceitos avançados de desenvolvimento Fullstack.
